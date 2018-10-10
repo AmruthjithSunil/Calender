@@ -1,3 +1,13 @@
+/*
+    Here all the user defined functions of calender.cpp are written
+    Functions are:
+        computeYear
+        computeMonth
+        computeException
+        display
+*/
+
+
 void computeYear() {
     year = year % 400;
     c = year + year/4;
