@@ -5,6 +5,7 @@
         computeMonth
         computeException
         display
+        specificDay
 */
 
 
@@ -49,4 +50,14 @@ void display() {
         case 6: cout<<"Satur"; break;
     }
     cout<<"day\n";
+}
+
+void specificDay() {
+    cout<<"Enter the date : ";
+    cin >> day >> month >> year;
+    computeYear();
+    computeMonth();
+    computeException();
+    c += day;
+    display();
 }

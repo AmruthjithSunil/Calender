@@ -13,12 +13,6 @@ unsigned c, year, month, day;
 #include "./allFunctions.cpp"
 
 int main(){
-    cout<<"Enter the date : ";
-    cin >> day >> month >> year;
-    computeYear();
-    computeMonth();
-    computeException();
-    c += day;
-    display();
+    specificDay();
     return 0;
 }
