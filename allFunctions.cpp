@@ -4,8 +4,11 @@
         computeYear
         computeMonth
         computeException
-        display
+        displayDay
+        displayMonth
         specificDay
+        specificMonth
+        menuDriven
 */
 
 
@@ -38,7 +41,7 @@ void computeException() {
     c -= year/100;
 }
 
-void display() {
+void displayDay() {
     cout << "\t";
     switch(c % 7){
         case 0: cout<<"Sun"; break;
@@ -52,6 +55,25 @@ void display() {
     cout<<"day\n";
 }
 
+void displayMonth() {
+    std::cout << "\t" ;
+    switch (month) {
+        case 1: std::cout << "January" << '\n'; break;
+        case 2: std::cout << "February" << '\n'; break;
+        case 3: std::cout << "March" << '\n'; break;
+        case 4: std::cout << "April" << '\n'; break;
+        case 5: std::cout << "May" << '\n'; break;
+        case 6: std::cout << "June" << '\n'; break;
+        case 7: std::cout << "July" << '\n'; break;
+        case 8: std::cout << "August" << '\n'; break;
+        case 9: std::cout << "September" << '\n'; break;
+        case 10: std::cout << "October" << '\n'; break;
+        case 11: std::cout << "November" << '\n'; break;
+        case 12: std::cout << "December" << '\n'; break;
+    }
+    std::cout << " Sun Mon Tue Thu Fri Sat " << '\n';
+}
+
 void specificDay() {
     cout<<"Enter the date : ";
     cin >> day >> month >> year;
@@ -59,5 +81,23 @@ void specificDay() {
     computeMonth();
     computeException();
     c += day;
-    display();
+    displayDay();
+}
+
+void specificMonth() {
+    cout<<"Enter the date : ";
+    cin >> month >> year;
+    computeYear();
+    computeMonth();
+    computeException();
+    displayMonth();
+}
+
+void menuDriven() {
+    std::cout << "1.specificDay\n2.specificMonth\nEnter your choice : ";
+    std::cin >> choice;
+    switch (choice) {
+        case 1: specificDay(); break;
+        case 2: specificMonth(); break;
+    }
 }

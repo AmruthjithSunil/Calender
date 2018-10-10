@@ -4,15 +4,21 @@
 */
 
 
-#include<iostream>
+#include <iostream>
+#include <stdio.h>
 
 using namespace std;
 
-unsigned c, year, month, day;
+unsigned choice, c, year, month, day;
 
 #include "./allFunctions.cpp"
 
 int main(){
-    specificDay();
+    do{
+        menuDriven();
+        std::cout << "press 0 to exit :" << '\n';
+        std::cin >> choice;
+    }while(choice);
+    std::cout << "Thank you" << '\n';
     return 0;
 }
