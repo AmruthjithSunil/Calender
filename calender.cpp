@@ -9,7 +9,7 @@
 
 using namespace std;
 
-unsigned choice, c, year, month, day;
+unsigned choice, c, Year, year, month, day;
 
 #include "./allFunctions.cpp"
 
