@@ -84,7 +84,7 @@ int monthLength(){
     }
 }
 
-void displayMonth() {                                       //incomplete
+void displayMonth() {
     std::cout << "\t" ;
     switch (month) {
         case 1: std::cout << "January" ; break;
@@ -103,7 +103,7 @@ void displayMonth() {                                       //incomplete
     std::cout << "  " << Year << '\n';
     std::cout << " Sun Mon Tue Wed Thu Fri Sat " << '\n';
     c = c % 7;
-    for (int i = 0; i < c; i++) {
+    for (int i = 0; i <= c; i++) {
         std::cout << "    ";
     }
     int length = monthLength();
